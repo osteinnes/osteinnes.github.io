@@ -1,0 +1,192 @@
+<body>
+    <head>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" type="text/css" href="css/sidebar.css">
+        <link rel="stylesheet" type="text/css" href="css/slider.css">
+        <link rel="stylesheet" type="text/css" href="css/checkbox.css">
+    </head>
+
+    
+
+    <div class="sidenav">
+        <a id="btnAnimate">Animate</a>
+        <a id="btnSaveScene">Save Scene</a>
+        
+        <button class="dropdown-btn">Load Scene
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            
+            <input type="file" id="fileEx"/>
+                  
+          </div>
+          
+        
+        <button class="dropdown-btn">Create new building
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <form>
+                <a>Position:</a>
+                <input id="newBuildingPosX" placeholder="x cord">
+                <input id="newBuildingPosY" placeholder="y cord">
+                <input id="newBuildingPosZ" placeholder="z cord">
+            </form>
+            <form>
+                <a>Dimensions:</a>
+                <input id="newBuildingHeight" placeholder="Height : int">
+                <input id="newBuildingWidth" placeholder="Width : int">
+                <input id="newBuildingDepth" placeholder="Depth : int">
+            </form>
+            <select id="newTex">
+                <option value="tex1.jpg">Tex 1</option>
+                <option value="tex2.jpg">Tex 2</option>
+                <option value="tex3.jpg">Tex 3</option>
+                <option value="tex4.jpg">Tex 4</option>
+            </select>
+            <a id="btnNewBuilding">Create</a>
+          </div>
+        <button class="dropdown-btn">Add building
+        <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+        <a id="btnAddBuilding1">Building #1</a>
+        <a id="btnAddBuilding2">Building #2</a>
+        <a id="btnAddBuilding3">Building #3</a>
+        <a id="btnAddBuilding4">Building #4</a>
+        <a id="btnAddBuilding5">Building #5</a>
+        <a id="btnAddBuilding6">Building #6</a>
+        <a id="btnAddBuilding7">Building #7</a>
+        </div>
+        <button class="dropdown-btn" >Update current object
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <form>
+                <a>Position:</a>
+                <input id="currentBuildingPosX" placeholder="x cord">
+                <input id="currentBuildingPosY" placeholder="y cord">
+                <input id="currentBuildingPosZ" placeholder="z cord">
+            </form>
+            <form>
+                <a>Dimensions:</a>
+                <input id="currentBuildingHeight" placeholder="Height : int">
+                <input id="currentBuildingWidth" placeholder="Width : int">
+                <input id="currentBuildingDepth" placeholder="Depth : int">
+            </form>
+            <select id="updateTex">
+                <option value="tex1.jpg">Tex 1</option>
+                <option value="tex2.jpg">Tex 2</option>
+                <option value="tex3.jpg">Tex 3</option>
+                <option value="tex4.jpg">Tex 4</option>
+            </select>
+            <a id="btnUpdateBuilding">Change</a>
+            <a id="btnRemoveBuilding">Remove</a>
+          </div>
+          <button class="dropdown-btn" >Sun Control
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <div class="slidecontainer">
+                <input type="range" min="0" max="100" value="0" class="slider" id="sunRange">
+                <a id="sunRangeValue"></a>
+            </div>
+            <label class="container"> &nbsp;  Show helper
+                <input type="checkbox" id="checkCameraHelper">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container"> &nbsp;  Animate sun
+                <input type="checkbox" id="checkSunAnimation">
+                <span class="checkmark"></span>
+            </label>
+          </div>
+          <button class="dropdown-btn" >Sky Exposure
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <form>
+                <a>Position:</a>
+                <input id="skyExposurePosX" placeholder="x cord">
+                <input id="skyExposurePosY" placeholder="y cord">
+                <input id="skyExposurePosZ" placeholder="z cord">
+            </form>
+            <label class="container"> &nbsp;  Show Rays
+                <input type="checkbox" checked="checked" id="checkShowSkyExposure">
+                <span class="checkmark"></span>
+            </label>
+            <label id="skyVisValue"></label>
+            <a id="btnRemoveArrows">Reset</a>
+            <a id="btnCalculateSkyExposure">Calculate</a>
+          </div>
+          <button class="dropdown-btn" >Landmark
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a id="btnSetAsLandmark"></a>
+            <label class="container"> &nbsp;  All buildings
+                <input type="checkbox" checked="checked" id="checkAllBuildings">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container"> &nbsp;  Show Rays
+              <input type="checkbox" checked="checked" id="checkShowLandmarkRays">
+              <span class="checkmark"></span>
+          </label>
+            <label id="numBuildings"></label>
+            <label id="numHitBuildings"></label>
+            <label id="landmarkVis"></label>
+            <a id="btnRemoveLandmarkRays">Reset</a>
+            <a id="btnCalculateLandmark">Calculate</a>
+          </div>
+          <button class="dropdown-btn" >Light Intensity
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <label class="container"> &nbsp;  Pick spots
+              <input type="checkbox" id="checkPickSpots">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"> &nbsp;  Real-time
+              <input type="checkbox"  id="checkRealTime">
+              <span class="checkmark"></span>
+            </label>
+          <label class="container"> &nbsp;  Show Rays
+            <input type="checkbox" id="checkLightIntensityRay">
+            <span class="checkmark"></span>
+        </label>
+            <a id="btnResetLightIntensity">Reset</a>
+          </div>
+    </div>
+
+    <div>
+        
+        
+    <script src="js/three.js"></script>
+    <script src="js/loaders/GLTFLoader.js"></script>
+    <script src="https://s.cdpn.io/25480/OrbitControls.js"></script>
+    <script src="js/libs/TerrainLoader.js"></script>
+    <script src="js/exporters/GLTFExporter.js"></script>
+    <script src="js/loaders/OBJLoader.js"></script>
+    <script src="js/loaders/MTLLoader.js"></script>
+    
+    <script src="js/main.js"></script>
+    <script>
+        //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+            } else {
+            dropdownContent.style.display = "block";
+            }
+        });
+        }
+    </script>
+    </div>
+    
+    
+</body>

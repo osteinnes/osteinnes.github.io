@@ -1,168 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-  <head>
-
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/smoothproducts.css">
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.68/Build/Cesium/Cesium.js"></script>
+  <link href="https://cesium.com/downloads/cesiumjs/releases/1.68/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+</head>
 
-    <title>Projects by Ole-martin Steinnes</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/3-col-portfolio.css" rel="stylesheet">
-
-  </head>
-
-  <body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Projects by Ole-martin Steinnes</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="#">Simulator</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"></li>
+                    <li class="nav-item" role="presentation"></li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
-
-    <!-- Page Content -->
-    <div class="container">
-
-      <!-- Page Heading -->
-      <h1 class="my-4">
-
-      </h1>
-
-      <div class="row">
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Project One</a>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+    <main class="page landing-page">
+        <section class="clean-block clean-info dark" style="background-image: url(&quot;assets/img/scenery/image1.jpg&quot;);background-size: cover;background-repeat: no-repeat;background-position: center;">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Use the inspector</h2>
+                    <p>Pick a location on the globe below, or enter the inspector manually.</p>
+                </div>
             </div>
-          </div>
+        </section>
+        <div class="container">
+            <div id="cesiumContainer" style="width:100%"></div>
+<div id="toolbar"></div>
+  
         </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Project Two</a>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-          </div>
+        <div class="container" style="width:100%">
+            <iframe id="frame" src="./inspector.html" seamless style="display:block; width:100%; height:100vh;"></iframe>
         </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Project Three</a>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Project Four</a>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Project Five</a>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Project Six</a>
-              </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /.row -->
+    </main>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="assets/js/smoothproducts.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+<script>
+    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjNDkxNmUwOC1hN2Y1LTQ0NGQtODVlZC01ZjA5OTA4YTlhZjQiLCJpZCI6MTUxODEsInNjb3BlcyI6WyJhc3IiLCJnYyJdLCJpYXQiOjE1NjczNzU2MDB9.9Z7d7bgJmmIxDggXO1VNNHpMmg1s9nyHxwm42Un-xgQ';
+    var viewer = new Cesium.Viewer('cesiumContainer', {
+    timeline : false,
+    animation : false,
+    selectionIndicator : false
+});
 
-      <!-- Pagination -->
-      <ul class="pagination justify-content-center">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-            <span class="sr-only">Previous</span>
-          </a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">1</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">2</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">3</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-            <span class="sr-only">Next</span>
-          </a>
-        </li>
-      </ul>
+var pinBuilder = new Cesium.PinBuilder();
 
-    </div>
-    <!-- /.container -->
+var lastSelectedPin;
+viewer.selectedEntityChanged.addEventListener(function(newEntity) {
+    if (lastSelectedPin && lastSelectedPin.billboard) {
+        lastSelectedPin.billboard.show = false;
+    }
+    lastSelectedPin = newEntity;
+    if (lastSelectedPin && lastSelectedPin.billboard) {
+        if (lastSelectedPin.name == "Nice, France"){
+            document.getElementById("frame").contentWindow.loadModel("Nice");
+        } else if (lastSelectedPin.name == "Kragero, Norway") {
+            document.getElementById("frame").contentWindow.loadModel("Kragero");
+        }
+        lastSelectedPin.billboard.show = true;
+    }
+});
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
-      </div>
-      <!-- /.container -->
-    </footer>
+var bluePin = viewer.entities.add({
+    name : 'Nice, France',
+    position : Cesium.Cartesian3.fromDegrees(7.289429,43.675819),
+    billboard : {
+        show : false,
+        image : pinBuilder.fromText('Nice, France', Cesium.Color.BLACK, 48).toDataURL(),
+        verticalOrigin : Cesium.VerticalOrigin.BOTTOM
+    },
+    point : {
+        pixelSize : 10,
+        color : Cesium.Color.ROYALBLUE,
+        outlineWidth: 2,
+        outlineColor: Cesium.Color.WHITE
+    }
+});
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+var questionPin = viewer.entities.add({
+    name : 'Kragero, Norway',
+    position : Cesium.Cartesian3.fromDegrees(9.414690,58.869301),
+    billboard : {
+        show : false,
+        image : pinBuilder.fromText('?', Cesium.Color.BLACK, 48).toDataURL(),
+        verticalOrigin : Cesium.VerticalOrigin.BOTTOM
+    },
+    point : {
+        pixelSize : 10,
+        color : Cesium.Color.BLACK,
+        outlineWidth: 2,
+        outlineColor: Cesium.Color.WHITE
+    }
+});
 
-  </body>
+var url = Cesium.buildModuleUrl('Assets/Textures/maki/grocery.png');
+var groceryPin = Cesium.when(pinBuilder.fromUrl(url, Cesium.Color.GREEN, 48), function(canvas) {
+    return viewer.entities.add({
+        name : 'Grocery store',
+        position : Cesium.Cartesian3.fromDegrees(-75.1705217, 39.921786),
+        billboard : {
+            show : false,
+            image : canvas.toDataURL(),
+            verticalOrigin : Cesium.VerticalOrigin.BOTTOM
+        },
+        point : {
+            pixelSize : 10,
+            color : Cesium.Color.GREEN,
+            outlineWidth: 2,
+            outlineColor: Cesium.Color.WHITE
+        }
+    });
+});
+
+//Create a red pin representing a hospital from the maki icon set.
+var hospitalPin = Cesium.when(pinBuilder.fromMakiIconId('hospital', Cesium.Color.RED, 48), function(canvas) {
+    return viewer.entities.add({
+        name : 'Hospital',
+        position : Cesium.Cartesian3.fromDegrees(-75.1698606, 39.9211275),
+        billboard : {
+            show : false,
+            image : canvas.toDataURL(),
+            verticalOrigin : Cesium.VerticalOrigin.BOTTOM
+        },
+        point : {
+            pixelSize : 10,
+            color : Cesium.Color.RED,
+            outlineWidth: 2,
+            outlineColor: Cesium.Color.WHITE
+        }
+    });
+});
+
+//Since some of the pins are created asynchronously, wait for them all to load before zooming/
+Cesium.when.all([bluePin, questionPin, groceryPin, hospitalPin], function(pins){
+    viewer.zoomTo(pins);
+});
+    
+  </script>
 
 </html>
